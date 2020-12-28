@@ -1,0 +1,17 @@
+{
+	"id":"com.moimz.minitalk.plugin.filterword",
+	"icon":"xi xi-check-commentout",
+	"title":{
+		"ko":"단어필터링 플러그인"
+	},
+	"version":"1.0.0",
+	"description":{
+		"ko":"채팅메시지의 특정단어를 필터링합니다."
+	},
+	"author":{
+		"name":"Arzz",
+		"email":"arzz@arzz.com"
+	},
+	"homepage":"https://www.minitalk.io",
+	"language":"ko"
+}
