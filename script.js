@@ -1,13 +1,18 @@
 /**
  * 이 파일은 미니톡 단어필터링 플러그인의 일부입니다. (https://www.minitalk.io)
  *
- * 광고메시지를 차단합니다.
+ * 비속어를 차단합니다.
  * 
  * @file /plugins/filterword/script.js
  * @author Arzz (arzz@arzz.com)
  * @license MIT License
  * @version 1.0.0
- * @modified 2020. 12. 28.
+ * @modified 2021. 1. 24.
+ */
+if (Minitalk === undefined) return;
+
+/**
+ * 필터링할 단어를 아래와 같이 입력하여 주십시오.
  */
 me.words = [
 	"개새끼",
@@ -814,7 +819,7 @@ Minitalk.on("beforeSendMessage",function(minitalk,message,user) {
 		
 		
 		// 필터링이 완료된 메시지를 서버로 전송하고, 메시지 전송을 중단한다.
-		Minitalk.socket.sendMessage(message,true);
+		Minitalk.socket.sendMessage("message",message,true);
 		
 		// 입력창을 초기화한다.
 		Minitalk.ui.setInputVal("");
