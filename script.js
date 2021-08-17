@@ -6,8 +6,8 @@
  * @file /plugins/filterword/script.js
  * @author Arzz (arzz@arzz.com)
  * @license MIT License
- * @version 1.0.0
- * @modified 2021. 1. 24.
+ * @version 1.0.1
+ * @modified 2021. 8. 17.
  */
 if (Minitalk === undefined) return;
 
@@ -807,7 +807,7 @@ me.words = [
 ];
 
 // 메시지를 필터링한다.
-Minitalk.on("beforeSendMessage",function(minitalk,message,user) {
+Minitalk.on("beforeSendMessage",function(minitalk,message) {
 	var reg = new RegExp("(" + me.words.join("|") + ")","g");
 	
 	// 필터링된 단어가 포함되어 있는 경우
